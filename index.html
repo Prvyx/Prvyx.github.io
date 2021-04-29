@@ -189,11 +189,11 @@
         <h2 id="总览"><a href="#总览" class="headerlink" title="总览"></a>总览</h2><blockquote class="pullquote"><p>创建一个特定名称的仓库 =&gt; 将Hexo博客所需的文件部署到Github</p>
 </blockquote>
 <!-- more  -->
-<h2 id="在Github创建一个新的仓库，该仓库用来存放博客所需要的文件"><a href="#在Github创建一个新的仓库，该仓库用来存放博客所需要的文件" class="headerlink" title="在Github创建一个新的仓库，该仓库用来存放博客所需要的文件"></a>在Github创建一个新的仓库，该仓库用来存放博客所需要的文件</h2>
+<h2 id="详细流程"><a href="#详细流程" class="headerlink" title="详细流程"></a>详细流程</h2><h3 id="在Github创建一个新的仓库，该仓库用来存放博客所需要的文件"><a href="#在Github创建一个新的仓库，该仓库用来存放博客所需要的文件" class="headerlink" title="在Github创建一个新的仓库，该仓库用来存放博客所需要的文件"></a>在Github创建一个新的仓库，该仓库用来存放博客所需要的文件</h3>
+
 
 <p>注：用户名为Username，则创建的新仓库的url必须为Username.github.io</p>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>注：前提是需要回到blog目录（cd ~/blog）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ~&#x2F;blog   #工作目录回到blog目录</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>注：<br>hexo clean : 删除blog/public目录（blog/public目录下存放的是heox博客所需要的文件）<br>hexo g : 生成blog/public目录<br>hexo d : 会生成blog/.deploy_git目录，blog/.deploy_git存放的所有文件会部署（deploy）至你新建的Username.github.io仓库。最后，Github会根据你的Username.github.io仓库的文件来自动生成Username.github.io网址的布局</p>
 <p>最后，至此，Hexo博客的部署已经完成。后续会介绍Hexo的主题如何搭建，若有兴趣，请见：</p>
 
@@ -224,7 +224,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/在Linux上搭建Hexo-Github个人博客，Hexo博客部署在Github//" class="article-tag-list-link color1">在Linux上搭建Hexo+Github个人博客，Hexo博客部署在Github</a>
+        			<a href="/categories/在Linux上搭建Hexo-Github个人博客//" class="article-tag-list-link color5">在Linux上搭建Hexo+Github个人博客</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/在Linux上搭建Hexo-Github个人博客/4-Hexo博客部署到Github//" class="article-tag-list-link color3">4.Hexo博客部署到Github</a>
         		</li>
       		
 		</ul>
@@ -321,7 +325,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/在Linux上搭建Hexo-Github个人博客/Hexo搭建个人博客//" class="article-tag-list-link color1">Hexo搭建个人博客</a>
+        			<a href="/categories/在Linux上搭建Hexo-Github个人博客/3-Hexo搭建个人博客//" class="article-tag-list-link color3">3.Hexo搭建个人博客</a>
         		</li>
       		
 		</ul>
@@ -382,13 +386,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Git的安装"><a href="#Git的安装" class="headerlink" title="Git的安装"></a>Git的安装</h2><a href="https://mp.weixin.qq.com/s/3MN_du8Q7dUb8Rm_k7wb6g" title="" target="">Linux上Git的安装</a>
+        <blockquote class="pullquote"><p>配置Git的原因：是Hexo部署到Github的前提</p>
+</blockquote>
+<h2 id="Git的安装"><a href="#Git的安装" class="headerlink" title="Git的安装"></a>Git的安装</h2><a href="https://mp.weixin.qq.com/s/3MN_du8Q7dUb8Rm_k7wb6g" title="" target="">Linux上Git的安装</a>
 <h2 id="Git的配置"><a href="#Git的配置" class="headerlink" title="Git的配置"></a>Git的配置</h2><p>前提：有一个Github账号<br>然后</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;这里填写你的Github用户名&quot;</span><br><span class="line">git config --global user.email &quot;这里填写你的Github绑定的email&quot;</span><br></pre></td></tr></table></figure>
-<p>然后，你可以查看配置是否成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;这里填写你的Github用户名&quot;</span><br><span class="line">git config --global user.email &quot;这里填写你的Github的email&quot;</span><br></pre></td></tr></table></figure>
+<p>然后，你可以使用下面的命令查看配置是否成功</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
 
-<p>总结：上面的步骤将（Hexo博客托管到Github的前提：）Git安装与配置执行完毕，接下来就可以把你的blog目录里面的文件放在Github上托管了</p>
+<p>总结：上述步骤把（Hexo博客托管到Github的前提：Git）Git安装与配置执行完毕，接下来就可以把你的blog目录里面的文件放在Github上托管了</p>
 
       
 
@@ -421,7 +427,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/在Linuxs上搭建Hexo-Github个人博客/Hexo博客托管到Github的前提：Git的下载与配置//" class="article-tag-list-link color4">Hexo博客托管到Github的前提：Git的下载与配置</a>
+        			<a href="/categories/在Linuxs上搭建Hexo-Github个人博客/2-Hexo博客托管到Github的前提-Git的下载与配置//" class="article-tag-list-link color2">2.(Hexo博客托管到Github的前提)Git的下载与配置</a>
         		</li>
       		
 		</ul>
@@ -525,7 +531,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/在Linux上搭建Hexo-Github个人博客/Hexo的下载//" class="article-tag-list-link color3">Hexo的下载</a>
+        			<a href="/categories/在Linux上搭建Hexo-Github个人博客/1-Hexo的下载//" class="article-tag-list-link color5">1.Hexo的下载</a>
         		</li>
       		
 		</ul>
@@ -831,11 +837,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">序言</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">序言</a>
               </li>
              
               <li class="article-tag-list-item">
