@@ -166,19 +166,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-将Hexo博客部署到Github上托管" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Hexo博客部署到Github" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/29/%E5%B0%86Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Github%E4%B8%8A%E6%89%98%E7%AE%A1/">将Hexo博客部署到Github上托管</a>
+      <a class="article-title" href="/2021/04/29/Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Github/">Hexo博客部署到Github</a>
     </h1>
   
 
         
-        <a href="/2021/04/29/%E5%B0%86Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Github%E4%B8%8A%E6%89%98%E7%AE%A1/" class="archive-article-date">
+        <a href="/2021/04/29/Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Github/" class="archive-article-date">
   	<time datetime="2021-04-29T07:06:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-29</time>
 </a>
         
@@ -190,19 +190,18 @@
 </blockquote>
 
 <!-- more  -->
-<h2 id="详细流程"><a href="#详细流程" class="headerlink" title="详细流程"></a>详细流程</h2><h3 id="在Github创建一个新的仓库，该仓库用来存放博客所需要的文件"><a href="#在Github创建一个新的仓库，该仓库用来存放博客所需要的文件" class="headerlink" title="在Github创建一个新的仓库，该仓库用来存放博客所需要的文件"></a>在Github创建一个新的仓库，该仓库用来存放博客所需要的文件</h3><img src="/2021/04/29/%E5%B0%86Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Github%E4%B8%8A%E6%89%98%E7%AE%A1/pic1.png" class="" title="如何创建新的仓库-Pic1">
+<h2 id="详细流程"><a href="#详细流程" class="headerlink" title="详细流程"></a>详细流程</h2><h3 id="1-在Github创建一个新的仓库，该仓库用来存放博客所需要的文件"><a href="#1-在Github创建一个新的仓库，该仓库用来存放博客所需要的文件" class="headerlink" title="1.在Github创建一个新的仓库，该仓库用来存放博客所需要的文件"></a>1.在Github创建一个新的仓库，该仓库用来存放博客所需要的文件</h3><img src="/2021/04/29/Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Github/pic1.png" class="" title="如何创建新的仓库-Pic1">
 <p>注：选择 Creat a new repository</p>
-<img src="/2021/04/29/%E5%B0%86Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Github%E4%B8%8A%E6%89%98%E7%AE%A1/pic2.png" class="" title="如何创建新的仓库-Pic2">
+<img src="/2021/04/29/Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Github/pic2.png" class="" title="如何创建新的仓库-Pic2">
 <p>注：用户名为Username，则创建的新仓库的url必须为Username.github.io（原因：github可以为每个User生成一个仅且一个静态网页，即Username.github.io）</p>
 <h3 id="安装一个Git插件"><a href="#安装一个Git插件" class="headerlink" title="安装一个Git插件"></a>安装一个Git插件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
 <p>注：个人猜测 hexo-deployer-git是hexo d命令所需要的插件，把hexo和Git联系起来（Github就是含许多Git的仓库）</p>
-<h3 id="设置hexo的-config-yml文件"><a href="#设置hexo的-config-yml文件" class="headerlink" title="设置hexo的_config.yml文件"></a>设置hexo的_config.yml文件</h3><img src="/2021/04/29/%E5%B0%86Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Github%E4%B8%8A%E6%89%98%E7%AE%A1/pic3.png" class="" title="Pic3">
+<h3 id="2-设置hexo的-config-yml文件"><a href="#2-设置hexo的-config-yml文件" class="headerlink" title="2.设置hexo的_config.yml文件"></a>2.设置hexo的_config.yml文件</h3><img src="/2021/04/29/Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Github/pic3.png" class="" title="Pic3">
 <p>注：”:”后面有空格！！<br>type: git<br>repo: <a target="_blank" rel="noopener" href="https://github.com/Username/Username.github.io.git">https://github.com/Username/Username.github.io.git</a>   #Username为自己的用户名<br>branch: master     #分支为master<br>修改Deployment相关信息（Deployment和hexo d有关）</p>
-<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ~&#x2F;blog   #工作目录回到blog目录</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h3 id="3-部署"><a href="#3-部署" class="headerlink" title="3.部署"></a>3.部署</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ~&#x2F;blog   #工作目录回到blog目录</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>注：<br>hexo clean : 删除blog/public目录（blog/public目录下存放的是heox博客所需要的文件）<br>hexo g : 生成blog/public目录<br>hexo d : 会生成blog/.deploy_git目录，blog/.deploy_git存放的所有文件会部署（deploy）至你新建的Username.github.io仓库。最后，Github会根据你的Username.github.io仓库的文件来自动生成Username.github.io网址的布局（这一步使用到前面说的《Git的下载与配置》）</p>
 <h3 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h3><p>注：把仓库的网址<a target="_blank" rel="noopener" href="https://github.com/Username/Username.github.io%E7%9A%84%E5%90%8E%E9%9D%A2%E9%83%A8%E5%88%86Username.github.io%E6%8B%BF%E5%87%BA%E6%9D%A5%E8%AE%BF%E9%97%AE%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E6%95%88%E6%9E%9C">https://github.com/Username/Username.github.io的后面部分Username.github.io拿出来访问，可以看到效果</a></p>
-<p>至此，Hexo博客的部署已经完成。后续会介绍Hexo的主题如何搭建，若有兴趣，请见：</p>
-
+<h2 id="至此，Hexo博客的部署已经完成。后续会介绍Hexo的主题如何搭建，若有兴趣，请见："><a href="#至此，Hexo博客的部署已经完成。后续会介绍Hexo的主题如何搭建，若有兴趣，请见：" class="headerlink" title="至此，Hexo博客的部署已经完成。后续会介绍Hexo的主题如何搭建，若有兴趣，请见："></a>至此，Hexo博客的部署已经完成。后续会介绍Hexo的主题如何搭建，若有兴趣，请见：</h2>
       
 
 
@@ -243,7 +242,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/29/%E5%B0%86Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Github%E4%B8%8A%E6%89%98%E7%AE%A1/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/04/29/Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Github/">展开全文 >></a>
         </p>
       
 
@@ -295,7 +294,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="流程总览"><a href="#流程总览" class="headerlink" title="流程总览"></a>流程总览</h2><blockquote class="pullquote"><p>mkdir ~/blog =&gt; cd ~/blog =&gt;hexo init =&gt; hexo g =&gt; hexo s =&gt; 完成</p>
+        <h2 id="总览"><a href="#总览" class="headerlink" title="总览"></a>总览</h2><blockquote class="pullquote"><p>mkdir ~/blog =&gt; cd ~/blog =&gt;hexo init =&gt; hexo g =&gt; hexo s =&gt; 完成</p>
 </blockquote>
         
           <a class="article-more-a" href="/2021/04/29/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more">more >></a>
@@ -394,14 +393,12 @@
       
         <blockquote class="pullquote"><p>配置Git的原因：是Hexo部署到Github的前提</p>
 </blockquote>
-<h2 id="Git的安装"><a href="#Git的安装" class="headerlink" title="Git的安装"></a>Git的安装</h2><a href="https://mp.weixin.qq.com/s/3MN_du8Q7dUb8Rm_k7wb6g" title="" target="">Linux上Git的安装</a>
-<h2 id="Git的配置"><a href="#Git的配置" class="headerlink" title="Git的配置"></a>Git的配置</h2><p>前提：有一个Github账号<br>然后</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;这里填写你的Github用户名&quot;</span><br><span class="line">git config --global user.email &quot;这里填写你的Github的email&quot;</span><br></pre></td></tr></table></figure>
-<p>然后，你可以使用下面的命令查看配置是否成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
 
-<p>总结：上述步骤把（Hexo博客托管到Github的前提：Git）Git安装与配置执行完毕，接下来就可以把你的blog目录里面的文件放在Github上托管了</p>
-
+<h2 id="总览"><a href="#总览" class="headerlink" title="总览"></a>总览</h2><blockquote class="pullquote"><p>Git的安装 =&gt; Git的配置</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2021/04/29/Git%E7%9A%84%E4%B8%8B%E8%BD%BD%E4%B8%8E%E9%85%8D%E7%BD%AE/#more">more >></a>
+        
       
 
 
@@ -474,19 +471,19 @@
 
 
   
-    <article id="post-Hexo的搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Hexo的下载" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/28/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/">Hexo的搭建</a>
+      <a class="article-title" href="/2021/04/28/Hexo%E7%9A%84%E4%B8%8B%E8%BD%BD/">Hexo的下载</a>
     </h1>
   
 
         
-        <a href="/2021/04/28/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/" class="archive-article-date">
+        <a href="/2021/04/28/Hexo%E7%9A%84%E4%B8%8B%E8%BD%BD/" class="archive-article-date">
   	<time datetime="2021-04-28T08:51:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-28</time>
 </a>
         
@@ -504,7 +501,7 @@
 </ul>
 </blockquote>
         
-          <a class="article-more-a" href="/2021/04/28/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/#more">more >></a>
+          <a class="article-more-a" href="/2021/04/28/Hexo%E7%9A%84%E4%B8%8B%E8%BD%BD/#more">more >></a>
         
       
 
@@ -546,7 +543,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/28/Hexo%E7%9A%84%E6%90%AD%E5%BB%BA/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/04/28/Hexo%E7%9A%84%E4%B8%8B%E8%BD%BD/">展开全文 >></a>
         </p>
       
 
@@ -855,11 +852,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Hexo搭建博客</a>
+                <a href="javascript:void(0)" class="js-tag color1">Hexo博客部署到Github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hexo博客部署到Github</a>
+                <a href="javascript:void(0)" class="js-tag color4">Hexo搭建博客</a>
               </li>
             
             <div class="clearfix"></div>
